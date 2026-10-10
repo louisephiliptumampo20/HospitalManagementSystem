@@ -137,11 +137,40 @@ public class Patienttab extends JFrame implements ActionListener {
         }
         else if(e.getSource() == btnRemove){
             // logic here!!
+            String text = patres.getText();
+        if (!text.isEmpty()) {
+            patres.setText("");
+        } else {
+            JOptionPane.showMessageDialog(this, "No appointments to remove.");
         }
+
+    }
         
         else if(e.getSource() == btnAdd) {
             //logic here!!
+            String name = patnameF.getText().trim();
+        String age = patageF.getText().trim();
+        String gender = (String) patgender.getSelectedItem();
+        String concern = patillnessF.getText().trim();
+        String history = medhistF.getText().trim();
+        String date = apptschedF.getText().trim();
+        String doctor = (String) avaibdocs.getSelectedItem();
+
+        if (name.isEmpty() || age.isEmpty() || concern.isEmpty() || date.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please fill in the required fields.");
+        } else {
+            patres.append(
+                    "Patient Name: " + name
+                    + "\nAge: " + age
+                    + "\nGender: " + gender
+                    + "\nConcern: " + concern
+                    + "\nMedical History: " + (history.isEmpty() ? "None" : history)
+                    + "\nAppointment Date: " + date
+                    + "\nDoctor: " + (doctor == null ? "Not selected" : doctor)
+                    + "\n------------------------------\n"
+            );
         }
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+}
+
 }
