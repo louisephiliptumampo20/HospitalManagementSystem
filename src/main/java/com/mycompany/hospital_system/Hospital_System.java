@@ -12,7 +12,6 @@ public class Hospital_System {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-       //hello micha
-       
+       //pag ito di gumana iiyak ako
     }
 }
