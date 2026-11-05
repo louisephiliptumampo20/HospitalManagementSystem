@@ -14,5 +14,7 @@ public class Hospital_System {
         System.out.println("Hello World!");
        //pag ito di gumana iiyak ako
        //hashdkjashkdhasjd
+       //sdasdadasdas
+       //hsalkdhashdasl
     }
 }
